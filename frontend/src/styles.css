@@ -1,0 +1,152 @@
+:root {
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --surface-2: #eff3fc;
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --text: #111827;
+  --muted: #6b7280;
+  --success: #16a34a;
+  --danger: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, #eef2ff 0%, #f8fafc 100%);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero,
+.result-section {
+  background: var(--surface);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+  padding: 1.25rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+h1 {
+  margin: 0;
+  color: #1e3a8a;
+}
+
+p {
+  margin: 0;
+}
+
+.file-uploader {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.file-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  background: #e0e7ff;
+  color: #1d4ed8;
+  border: 1px solid #c7d2fe;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.file-size {
+  font-size: 0.87rem;
+  color: var(--muted);
+}
+
+.primary-btn {
+  width: fit-content;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color 180ms ease-in-out;
+}
+
+.primary-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.primary-btn:hover:not(:disabled) {
+  background-color: var(--primary-dark);
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.87rem;
+}
+
+.alert {
+  margin-top: 0.75rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.alert.success {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #166534;
+}
+
+.alert.error {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: var(--danger);
+}
+
+.result-panel h2 {
+  margin-top: 0;
+  color: #1e40af;
+}
+
+.kyccard,
+.result-content,
+.result-empty {
+  background: var(--surface-2);
+  border: 1px solid #dbe4fd;
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin-top: 0.75rem;
+}
+
+.result-content pre,
+.kyccard pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.38;
+}
